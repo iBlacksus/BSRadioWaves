@@ -14,10 +14,11 @@
 1. Register on di.fm
 2. Find and install `DI.FM Radio` from the App Store
 3. Download and configure `Charles Proxy` for proxing https traffic from iPhone
-4. Launch di.fm application and find on `Charles Proxy` requests to `api.audioaddict.com`
+4. Launch `DI.FM Radio` and find on `Charles Proxy` requests to `api.audioaddict.com`
 5. Find your API key in requests
+
 ![](https://github.com/iBlacksus/BSRadioWaves/blob/master/DemoResources/key.jpg)
-6. Insert key into project and enjoy!
+6. Insert key into project at line `static let apiKey = ""` and enjoy!
 
 ## Requirements
   * iOS 9.0 or higher
