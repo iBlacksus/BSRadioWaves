@@ -18,6 +18,7 @@
 5. Find your API key in requests
 
 ![](https://github.com/iBlacksus/BSRadioWaves/blob/master/DemoResources/key.jpg)
+
 6. Insert key into project at line `static let apiKey = ""` and enjoy!
 
 ## Requirements
