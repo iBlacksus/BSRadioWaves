@@ -1,7 +1,7 @@
 # BSRadioWaves
 
-![](https://github.com/iBlacksus/BSRadioWaves/blob/master/DemoResources/iphone.png)
-![](https://github.com/iBlacksus/BSRadioWaves/blob/master/DemoResources/watch.png)
+![Image](DemoResources/iphone.png)
+![Image](DemoResources/watch.png)
 
 # BSRadioWaves is available for personal usage ONLY! Commercial usage is prohibited!
 
@@ -17,7 +17,7 @@
 4. Launch `DI.FM Radio` and find on `Charles Proxy` requests to `api.audioaddict.com`
 5. Find your API key in requests
 
-![](https://github.com/iBlacksus/BSRadioWaves/blob/master/DemoResources/key.jpg)
+![Image](DemoResources/key.jpg)
 
 6. Insert key into project at line `static let apiKey = ""` and enjoy!
 
