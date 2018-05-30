@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13529" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13507"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Light.ttf">
+            <string>Roboto-Light</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--BSCategoriesController-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller identifier="BSCategoriesController" id="AgC-eL-Hgc" customClass="BSCategoriesController" customModule="Watch_Extension">
+                    <items>
+                        <table alignment="left" id="vpm-gn-jKY">
+                            <items>
+                                <tableRow identifier="BSCategoryRow" id="DW5-Q8-gEQ" customClass="BSCategoryRow" customModule="Watch_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="iSk-hq-avc">
+                                        <items>
+                                            <label alignment="center" verticalAlignment="center" text="Label" numberOfLines="2" id="D54-8S-Dqt">
+                                                <fontDescription key="font" name="Roboto-Light" family="Roboto" pointSize="12"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="label" destination="D54-8S-Dqt" id="bbl-4y-9N2"/>
+                                    </connections>
+                                </tableRow>
+                                <tableRow identifier="BSChannelRow" id="6KH-tJ-bRW" customClass="BSChannelRow" customModule="Watch_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="RLg-n7-qM4">
+                                        <items>
+                                            <label width="82" alignment="center" verticalAlignment="center" text="Label" textAlignment="center" numberOfLines="2" id="Yz0-xq-9Tz">
+                                                <fontDescription key="font" name="Roboto-Light" family="Roboto" pointSize="12"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="label" destination="Yz0-xq-9Tz" id="rmo-36-WnD"/>
+                                    </connections>
+                                </tableRow>
+                                <tableRow identifier="BSBackRow" id="HZh-zy-8Bd" customClass="BSBackRow" customModule="Watch_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="39x-rA-Bw8">
+                                        <items>
+                                            <label alignment="center" verticalAlignment="center" text="Back" id="utY-Dz-Hfe">
+                                                <fontDescription key="font" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                                            </label>
+                                        </items>
+                                        <color key="backgroundColor" red="1" green="0.2784313725" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="label" destination="utY-Dz-Hfe" id="LTf-sH-17A"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <imageView width="1" height="1" alignment="center" verticalAlignment="center" hidden="YES" id="ULn-30-GCl"/>
+                    </items>
+                    <connections>
+                        <outlet property="loadingImage" destination="ULn-30-GCl" id="nWb-t7-8g8"/>
+                        <outlet property="table" destination="vpm-gn-jKY" id="H2s-3O-mWk"/>
+                        <segue destination="bbQ-0a-CeT" kind="relationship" relationship="nextPage" id="Gfu-ec-ed9"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--BSPlayerController-->
+        <scene sceneID="UNB-dS-ZzB">
+            <objects>
+                <controller identifier="BSPlayerController" id="bbQ-0a-CeT" customClass="BSPlayerController" customModule="Watch_Extension">
+                    <items>
+                        <group width="1" height="1" alignment="center" verticalAlignment="center" layout="vertical" id="pIi-Ku-pGF">
+                            <items>
+                                <group width="1" height="10" alignment="left" id="Iw2-By-xaw"/>
+                                <label alignment="center" text="Title" textAlignment="center" id="dhI-YG-Vgq">
+                                    <fontDescription key="font" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                                </label>
+                                <label alignment="center" text="Artist" textAlignment="center" id="En7-VN-Qti">
+                                    <fontDescription key="font" name="Roboto-Light" family="Roboto" pointSize="10"/>
+                                </label>
+                                <group width="1" alignment="center" verticalAlignment="center" spacing="20" id="VYU-aP-F1N">
+                                    <items>
+                                        <button width="15" height="15" alignment="center" verticalAlignment="center" backgroundImage="listIcon" id="KrI-4U-oa8">
+                                            <connections>
+                                                <action selector="channels" destination="bbQ-0a-CeT" id="CK5-go-0Wy"/>
+                                            </connections>
+                                        </button>
+                                        <button width="30" height="30" alignment="center" verticalAlignment="center" backgroundImage="playIcon" id="hCi-VT-fLr">
+                                            <connections>
+                                                <action selector="play" destination="bbQ-0a-CeT" id="9RN-v6-7jW"/>
+                                            </connections>
+                                        </button>
+                                        <button width="15" height="15" alignment="center" verticalAlignment="center" backgroundImage="whiteHeartIcon" id="OSL-QQ-sgf">
+                                            <connections>
+                                                <action selector="like" destination="bbQ-0a-CeT" id="Dyb-pN-opK"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                    <variation key="device=watch42mm" spacing="25"/>
+                                </group>
+                                <group width="1" height="60" alignment="center" verticalAlignment="bottom" id="rfS-zG-IGo">
+                                    <items>
+                                        <label alignment="left" verticalAlignment="center" text="99:99" textAlignment="left" id="ywI-9L-sbV">
+                                            <fontDescription key="font" name="Roboto-Light" family="Roboto" pointSize="10"/>
+                                        </label>
+                                        <label alignment="right" verticalAlignment="center" text="99:99" textAlignment="right" id="qqx-Me-eu2">
+                                            <fontDescription key="font" name="Roboto-Light" family="Roboto" pointSize="10"/>
+                                        </label>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                        <imageView width="1" height="1" alignment="center" verticalAlignment="center" hidden="YES" id="dQL-nU-M1E"/>
+                    </items>
+                    <connections>
+                        <outlet property="artistLabel" destination="En7-VN-Qti" id="pKo-9E-rXb"/>
+                        <outlet property="loadingImage" destination="dQL-nU-M1E" id="thB-hZ-D5r"/>
+                        <outlet property="mainGroup" destination="pIi-Ku-pGF" id="tep-H8-KQQ"/>
+                        <outlet property="playButton" destination="hCi-VT-fLr" id="hrD-BP-Bff"/>
+                        <outlet property="titleLabel" destination="dhI-YG-Vgq" id="C5U-0H-jc9"/>
+                        <outlet property="trackDurationLabel" destination="qqx-Me-eu2" id="2vq-sr-WA1"/>
+                        <outlet property="trackPositionLabel" destination="ywI-9L-sbV" id="7Os-QI-Wak"/>
+                        <outlet property="trackTimeGroup" destination="rfS-zG-IGo" id="wRt-Qb-Ns2"/>
+                        <segue destination="p8E-u0-M09" kind="relationship" relationship="nextPage" id="kki-Gd-g6e"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="468" y="345"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="q69-92-N20">
+            <objects>
+                <controller id="p8E-u0-M09"/>
+            </objects>
+            <point key="canvasLocation" x="714" y="345"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="Watch" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+    </scenes>
+</document>

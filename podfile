@@ -1,0 +1,21 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+use_frameworks!
+
+def shared_pods
+	pod 'Alamofire', '~> 4.5'
+    pod 'AlamofireObjectMapper', '~> 5.0'
+    pod 'SDWebImage', '~> 4.0'
+    pod 'CryptoSwift'
+end
+
+target 'BSRadioWaves' do
+	platform :ios, '9.0'
+    shared_pods
+    pod 'Toast-Swift', '~> 2.0.0'
+end
+
+target 'Watch Extension' do
+	platform :watchos, '4.0'
+    shared_pods
+end

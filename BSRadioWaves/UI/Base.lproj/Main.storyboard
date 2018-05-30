@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yTj-q0-vCi">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Light.ttf">
+            <string>Roboto-Light</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="gAa-eo-jXL">
+            <objects>
+                <tabBarController id="yTj-q0-vCi" customClass="BSTabBarController" customModule="BSRadioWaves" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NOi-Uz-vFP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="1" green="0.2784313725" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="1" green="0.27843137254901962" blue="0.41176470588235292" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Ts3-Pr-GCS"/>
+                        <segue destination="HEe-GJ-al9" kind="relationship" relationship="viewControllers" id="5BQ-62-YwY"/>
+                        <segue destination="EYn-Xx-He5" kind="relationship" relationship="viewControllers" id="7sm-Yg-Tc3"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dmG-BT-0nU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1906" y="133"/>
+        </scene>
+        <!--Channels-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="BSCategoriesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="BSCategoriesViewController" customModule="BSRadioWaves" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3iw-gV-gMP" customClass="BSCategoriesView" customModule="BSRadioWaves" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Sqb-YC-tqd">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PKN-By-wYP" customClass="BSWavesView" customModule="BSRadioWaves" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PKN-By-wYP" secondAttribute="trailing" id="0yc-9f-DFv"/>
+                            <constraint firstItem="PKN-By-wYP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="DcH-k2-5eE"/>
+                            <constraint firstAttribute="trailing" secondItem="3iw-gV-gMP" secondAttribute="trailing" id="O1o-r8-OkO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3iw-gV-gMP" secondAttribute="bottom" id="Sie-Sf-sTp"/>
+                            <constraint firstItem="PKN-By-wYP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZAn-M3-Pxc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PKN-By-wYP" secondAttribute="bottom" id="amn-xK-4zP"/>
+                            <constraint firstItem="3iw-gV-gMP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gBN-IL-h62"/>
+                            <constraint firstItem="3iw-gV-gMP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mFy-ZR-5sf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Channels" image="listIcon" id="GiC-Aa-OaQ">
+                        <color key="badgeColor" red="1" green="0.2784313725" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="pAW-kM-ovc"/>
+                    <connections>
+                        <outlet property="collectionView" destination="3iw-gV-gMP" id="0pj-gd-CqV"/>
+                        <outlet property="loadingView" destination="PKN-By-wYP" id="mbl-nn-g5t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1087" y="-630"/>
+        </scene>
+        <!--Play-->
+        <scene sceneID="uyx-kU-qDX">
+            <objects>
+                <viewController storyboardIdentifier="BSPlayerViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HEe-GJ-al9" customClass="BSPlayerViewController" customModule="BSRadioWaves" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zb0-9D-uus">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gpl-gz-nuM" customClass="BSRoundView" customModule="BSRadioWaves" customModuleProvider="target">
+                                <rect key="frame" x="24" y="28" width="327" height="199"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vxX-K7-7pz" customClass="BSRoundView" customModule="BSRadioWaves" customModuleProvider="target">
+                                <rect key="frame" x="16" y="36" width="343" height="183"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="VnW-Z8-nY9" customClass="BSTrackInfoView" customModule="BSRadioWaves" customModuleProvider="target">
+                                <rect key="frame" x="8" y="44" width="359" height="167"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="left" text="RadioWaves" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="XMA-h4-Cok">
+                                        <rect key="frame" x="8" y="8" width="343" height="151"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="60"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dMP-Xn-7vp" customClass="BSCircleView" customModule="BSRadioWaves" customModuleProvider="target">
+                                        <rect key="frame" x="135.5" y="5.5" width="88.5" height="88.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="PZN-Cb-ttp" customClass="BSRoundImageView" customModule="BSRadioWaves" customModuleProvider="target">
+                                        <rect key="frame" x="138.5" y="8" width="83.5" height="83.5"/>
+                                        <color key="backgroundColor" red="0.19215686269999999" green="0.66666666669999997" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="PZN-Cb-ttp" secondAttribute="height" id="5Tb-pr-2kM"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aup-rz-S4o">
+                                        <rect key="frame" x="8" y="108.5" width="343" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="19"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Artist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UK1-Ck-05b">
+                                        <rect key="frame" x="8" y="133" width="343" height="18"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="UK1-Ck-05b" firstAttribute="top" secondItem="aup-rz-S4o" secondAttribute="bottom" constant="2" id="1nK-nh-HBB"/>
+                                    <constraint firstItem="XMA-h4-Cok" firstAttribute="top" secondItem="VnW-Z8-nY9" secondAttribute="top" constant="8" id="39Q-hl-l90"/>
+                                    <constraint firstAttribute="trailing" secondItem="aup-rz-S4o" secondAttribute="trailing" constant="8" id="5Yc-m5-Abd"/>
+                                    <constraint firstItem="dMP-Xn-7vp" firstAttribute="width" secondItem="PZN-Cb-ttp" secondAttribute="width" constant="5" id="6bJ-RN-oAE"/>
+                                    <constraint firstItem="dMP-Xn-7vp" firstAttribute="centerY" secondItem="PZN-Cb-ttp" secondAttribute="centerY" id="6ga-za-oFH"/>
+                                    <constraint firstItem="aup-rz-S4o" firstAttribute="leading" secondItem="VnW-Z8-nY9" secondAttribute="leading" constant="8" id="6lP-Ge-7u9"/>
+                                    <constraint firstItem="PZN-Cb-ttp" firstAttribute="top" secondItem="VnW-Z8-nY9" secondAttribute="top" constant="8" id="7UW-Vf-Bo5"/>
+                                    <constraint firstItem="UK1-Ck-05b" firstAttribute="leading" secondItem="VnW-Z8-nY9" secondAttribute="leading" constant="8" id="8cv-uI-8NY"/>
+                                    <constraint firstItem="dMP-Xn-7vp" firstAttribute="height" secondItem="PZN-Cb-ttp" secondAttribute="height" constant="5" id="A1U-S9-bvv"/>
+                                    <constraint firstAttribute="trailing" secondItem="XMA-h4-Cok" secondAttribute="trailing" constant="8" id="F5p-Yg-2Ej"/>
+                                    <constraint firstAttribute="trailing" secondItem="UK1-Ck-05b" secondAttribute="trailing" constant="8" id="Qwk-2G-G0u"/>
+                                    <constraint firstItem="PZN-Cb-ttp" firstAttribute="centerX" secondItem="VnW-Z8-nY9" secondAttribute="centerX" id="WzX-YH-NrY"/>
+                                    <constraint firstItem="XMA-h4-Cok" firstAttribute="leading" secondItem="VnW-Z8-nY9" secondAttribute="leading" constant="8" id="c4i-nV-2Vy"/>
+                                    <constraint firstAttribute="bottom" secondItem="UK1-Ck-05b" secondAttribute="bottom" constant="16" id="cZp-N8-noJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="XMA-h4-Cok" secondAttribute="bottom" constant="8" id="nBn-8t-Gjh"/>
+                                    <constraint firstItem="PZN-Cb-ttp" firstAttribute="height" secondItem="VnW-Z8-nY9" secondAttribute="height" multiplier="1/2" id="rpp-qo-ZfG"/>
+                                    <constraint firstItem="dMP-Xn-7vp" firstAttribute="centerX" secondItem="PZN-Cb-ttp" secondAttribute="centerX" id="wZK-fQ-18Z"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="artistLabel" destination="UK1-Ck-05b" id="4au-9y-FrY"/>
+                                    <outlet property="channelNameLabel" destination="XMA-h4-Cok" id="RIb-56-Dh6"/>
+                                    <outlet property="titleLabel" destination="aup-rz-S4o" id="Zoh-DW-O9Y"/>
+                                    <outlet property="trackImageBackgroundView" destination="dMP-Xn-7vp" id="A9y-Ig-fGW"/>
+                                    <outlet property="trackImageView" destination="PZN-Cb-ttp" id="hRZ-Jv-cOp"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Gut-e4-rJ5" customClass="BSWavesView" customModule="BSRadioWaves" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="227" width="375" height="197"/>
+                                <color key="backgroundColor" red="0.19215686269999999" green="0.66666666669999997" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="kQM-AK-1h5" appends="YES" id="vJE-jg-Puq"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K72-Pm-FNQ" customClass="BSWaveformView" customModule="BSRadioWaves" customModuleProvider="target">
+                                <rect key="frame" x="-1" y="424" width="377" height="60.5"/>
+                                <subviews>
+                                    <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ty5-Fy-yfi">
+                                        <rect key="frame" x="0.0" y="0.0" width="1" height="60.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="0.5" id="aRO-S9-UB0"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="ty5-Fy-yfi" firstAttribute="top" secondItem="K72-Pm-FNQ" secondAttribute="top" id="My1-qm-ahi"/>
+                                    <constraint firstAttribute="bottom" secondItem="ty5-Fy-yfi" secondAttribute="bottom" id="e0t-M3-UW6"/>
+                                    <constraint firstItem="ty5-Fy-yfi" firstAttribute="leading" secondItem="K72-Pm-FNQ" secondAttribute="leading" id="hes-JJ-sBy"/>
+                                    <constraint firstItem="ty5-Fy-yfi" firstAttribute="centerY" secondItem="K72-Pm-FNQ" secondAttribute="centerY" id="zWV-BI-FYp"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqE-Da-Bal">
+                                <rect key="frame" x="7" y="448.5" width="28" height="13"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="11"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="00:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ToO-uo-2gJ">
+                                <rect key="frame" x="340" y="448.5" width="28" height="13"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="11"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iVw-7Y-UL2">
+                                <rect key="frame" x="0.0" y="484.5" width="375" height="133.5"/>
+                                <subviews>
+                                    <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fZc-LJ-1HO" customClass="BSCircleView" customModule="BSRadioWaves" customModuleProvider="target">
+                                        <rect key="frame" x="134" y="13.5" width="107.5" height="107.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yUG-ze-ID0" customClass="BSCircleView" customModule="BSRadioWaves" customModuleProvider="target">
+                                        <rect key="frame" x="139" y="18.5" width="97.5" height="97.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yt1-IE-JZU" customClass="BSPlayButton" customModule="BSRadioWaves" customModuleProvider="target">
+                                        <rect key="frame" x="144" y="23.5" width="87.5" height="87.5"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="yt1-IE-JZU" secondAttribute="height" id="ZGn-Wa-Gjm"/>
+                                        </constraints>
+                                        <state key="normal">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="play:" destination="HEe-GJ-al9" eventType="touchUpInside" id="n1i-g6-MH4"/>
+                                        </connections>
+                                    </button>
+                                    <view alpha="0.60000002384185791" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0A3-ja-TlU" customClass="BSCircleView" customModule="BSRadioWaves" customModuleProvider="target">
+                                        <rect key="frame" x="44.5" y="37.5" width="59.5" height="59.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view alpha="0.89999997615814209" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="86M-bZ-mpR" customClass="BSCircleView" customModule="BSRadioWaves" customModuleProvider="target">
+                                        <rect key="frame" x="48.5" y="41.5" width="51.5" height="51.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="prY-26-xvI" customClass="BSRoundButton" customModule="BSRadioWaves" customModuleProvider="target">
+                                        <rect key="frame" x="52.5" y="45.5" width="43.5" height="43.5"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="prY-26-xvI" secondAttribute="height" id="7ou-o4-78F"/>
+                                        </constraints>
+                                        <state key="normal">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="airplay:" destination="HEe-GJ-al9" eventType="touchUpInside" id="vTC-9p-eOu"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="airplayIcon" translatesAutoresizingMaskIntoConstraints="NO" id="tsW-uD-rEh">
+                                        <rect key="frame" x="60.5" y="53.5" width="27.5" height="27.5"/>
+                                    </imageView>
+                                    <view alpha="0.60000002384185791" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dXs-zy-LAZ" customClass="BSCircleView" customModule="BSRadioWaves" customModuleProvider="target">
+                                        <rect key="frame" x="272" y="37.5" width="59.5" height="59.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view alpha="0.89999997615814209" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gc5-qC-j3K" customClass="BSCircleView" customModule="BSRadioWaves" customModuleProvider="target">
+                                        <rect key="frame" x="276" y="41.5" width="51.5" height="51.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="twh-JF-yC5" customClass="BSRoundButton" customModule="BSRadioWaves" customModuleProvider="target">
+                                        <rect key="frame" x="280" y="45.5" width="43.5" height="43.5"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="twh-JF-yC5" secondAttribute="height" id="fM5-UX-xOZ"/>
+                                        </constraints>
+                                        <state key="normal">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="like:" destination="HEe-GJ-al9" eventType="touchUpInside" id="sZe-XK-M6q"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="whiteHeartIcon" translatesAutoresizingMaskIntoConstraints="NO" id="qv3-Vv-bBF">
+                                        <rect key="frame" x="288" y="55.5" width="27.5" height="27.5"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.94117647058823528" blue="0.94901960784313721" alpha="0.80405479753521125" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="yt1-IE-JZU" firstAttribute="centerX" secondItem="iVw-7Y-UL2" secondAttribute="centerX" id="09b-bs-ufo"/>
+                                    <constraint firstItem="86M-bZ-mpR" firstAttribute="centerX" secondItem="prY-26-xvI" secondAttribute="centerX" id="4JR-5h-nK2"/>
+                                    <constraint firstItem="gc5-qC-j3K" firstAttribute="width" secondItem="twh-JF-yC5" secondAttribute="width" constant="8" id="4k9-5s-UHF"/>
+                                    <constraint firstItem="yUG-ze-ID0" firstAttribute="height" secondItem="yt1-IE-JZU" secondAttribute="height" constant="10" id="5bM-Ot-ayZ"/>
+                                    <constraint firstItem="qv3-Vv-bBF" firstAttribute="centerY" secondItem="twh-JF-yC5" secondAttribute="centerY" constant="2" id="9xW-ql-0wF"/>
+                                    <constraint firstItem="0A3-ja-TlU" firstAttribute="width" secondItem="prY-26-xvI" secondAttribute="width" constant="16" id="BII-UT-vcf"/>
+                                    <constraint firstItem="86M-bZ-mpR" firstAttribute="centerY" secondItem="prY-26-xvI" secondAttribute="centerY" id="Ctn-id-1r6"/>
+                                    <constraint firstItem="prY-26-xvI" firstAttribute="centerY" secondItem="iVw-7Y-UL2" secondAttribute="centerY" id="Dri-cs-Y5E"/>
+                                    <constraint firstItem="gc5-qC-j3K" firstAttribute="centerY" secondItem="twh-JF-yC5" secondAttribute="centerY" id="FdM-k4-eOg"/>
+                                    <constraint firstItem="fZc-LJ-1HO" firstAttribute="width" secondItem="yt1-IE-JZU" secondAttribute="width" constant="20" id="HFo-V0-DQR"/>
+                                    <constraint firstItem="qv3-Vv-bBF" firstAttribute="width" secondItem="twh-JF-yC5" secondAttribute="width" constant="-16" id="LN7-iW-IFP"/>
+                                    <constraint firstItem="yt1-IE-JZU" firstAttribute="centerY" secondItem="iVw-7Y-UL2" secondAttribute="centerY" id="MPx-3n-VnC"/>
+                                    <constraint firstItem="twh-JF-yC5" firstAttribute="height" secondItem="iVw-7Y-UL2" secondAttribute="height" multiplier="0.33" id="OKX-un-jKz"/>
+                                    <constraint firstItem="yt1-IE-JZU" firstAttribute="height" secondItem="iVw-7Y-UL2" secondAttribute="height" multiplier="0.66" id="PF4-07-eKp"/>
+                                    <constraint firstItem="prY-26-xvI" firstAttribute="centerX" secondItem="iVw-7Y-UL2" secondAttribute="centerX" multiplier="0.5" constant="-20" id="Phu-xO-lh6"/>
+                                    <constraint firstItem="yUG-ze-ID0" firstAttribute="centerY" secondItem="yt1-IE-JZU" secondAttribute="centerY" id="Qri-EZ-Wa1"/>
+                                    <constraint firstItem="fZc-LJ-1HO" firstAttribute="centerY" secondItem="yt1-IE-JZU" secondAttribute="centerY" id="QvO-NB-aEy"/>
+                                    <constraint firstItem="tsW-uD-rEh" firstAttribute="centerX" secondItem="prY-26-xvI" secondAttribute="centerX" id="R6m-y5-kRQ"/>
+                                    <constraint firstItem="gc5-qC-j3K" firstAttribute="height" secondItem="twh-JF-yC5" secondAttribute="height" constant="8" id="RYX-AS-DiD"/>
+                                    <constraint firstItem="dXs-zy-LAZ" firstAttribute="centerX" secondItem="twh-JF-yC5" secondAttribute="centerX" id="Z5Y-7C-ANN"/>
+                                    <constraint firstItem="twh-JF-yC5" firstAttribute="centerX" secondItem="iVw-7Y-UL2" secondAttribute="centerX" multiplier="1.5" constant="20" id="ZBq-gd-fp1"/>
+                                    <constraint firstItem="gc5-qC-j3K" firstAttribute="centerX" secondItem="twh-JF-yC5" secondAttribute="centerX" id="ZiG-fr-6oY"/>
+                                    <constraint firstItem="prY-26-xvI" firstAttribute="height" secondItem="iVw-7Y-UL2" secondAttribute="height" multiplier="0.33" id="ZjW-3H-ne4"/>
+                                    <constraint firstItem="86M-bZ-mpR" firstAttribute="height" secondItem="prY-26-xvI" secondAttribute="height" constant="8" id="ZrW-Sp-YDh"/>
+                                    <constraint firstItem="0A3-ja-TlU" firstAttribute="centerX" secondItem="prY-26-xvI" secondAttribute="centerX" id="dgO-cG-ZQd"/>
+                                    <constraint firstItem="dXs-zy-LAZ" firstAttribute="height" secondItem="twh-JF-yC5" secondAttribute="height" constant="16" id="eIb-rF-ywm"/>
+                                    <constraint firstItem="dXs-zy-LAZ" firstAttribute="width" secondItem="twh-JF-yC5" secondAttribute="width" constant="16" id="fHr-Eo-C0u"/>
+                                    <constraint firstItem="tsW-uD-rEh" firstAttribute="centerY" secondItem="prY-26-xvI" secondAttribute="centerY" id="gqa-MV-NES"/>
+                                    <constraint firstItem="twh-JF-yC5" firstAttribute="centerY" secondItem="iVw-7Y-UL2" secondAttribute="centerY" id="h7U-d9-c5O"/>
+                                    <constraint firstItem="tsW-uD-rEh" firstAttribute="width" secondItem="prY-26-xvI" secondAttribute="width" constant="-16" id="hxK-JB-V68"/>
+                                    <constraint firstItem="qv3-Vv-bBF" firstAttribute="centerX" secondItem="twh-JF-yC5" secondAttribute="centerX" id="klG-pX-VW1"/>
+                                    <constraint firstItem="86M-bZ-mpR" firstAttribute="width" secondItem="prY-26-xvI" secondAttribute="width" constant="8" id="lHF-AG-2Y8"/>
+                                    <constraint firstItem="fZc-LJ-1HO" firstAttribute="height" secondItem="yt1-IE-JZU" secondAttribute="height" constant="20" id="mCy-jg-cZ4"/>
+                                    <constraint firstItem="yUG-ze-ID0" firstAttribute="width" secondItem="yt1-IE-JZU" secondAttribute="width" constant="10" id="mb5-ut-nUt"/>
+                                    <constraint firstItem="0A3-ja-TlU" firstAttribute="height" secondItem="prY-26-xvI" secondAttribute="height" constant="16" id="mkC-YS-YxB"/>
+                                    <constraint firstItem="yUG-ze-ID0" firstAttribute="centerX" secondItem="yt1-IE-JZU" secondAttribute="centerX" id="oKS-aY-fel"/>
+                                    <constraint firstItem="dXs-zy-LAZ" firstAttribute="centerY" secondItem="twh-JF-yC5" secondAttribute="centerY" id="rhd-Ta-c19"/>
+                                    <constraint firstItem="qv3-Vv-bBF" firstAttribute="height" secondItem="twh-JF-yC5" secondAttribute="height" constant="-16" id="s3Q-c9-NkV"/>
+                                    <constraint firstItem="tsW-uD-rEh" firstAttribute="height" secondItem="prY-26-xvI" secondAttribute="height" constant="-16" id="veK-XQ-KjI"/>
+                                    <constraint firstItem="0A3-ja-TlU" firstAttribute="centerY" secondItem="prY-26-xvI" secondAttribute="centerY" id="wZU-Mm-97z"/>
+                                    <constraint firstItem="fZc-LJ-1HO" firstAttribute="centerX" secondItem="yt1-IE-JZU" secondAttribute="centerX" id="x6c-kH-wh3"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="vxX-K7-7pz" firstAttribute="centerY" secondItem="VnW-Z8-nY9" secondAttribute="centerY" id="01x-rS-JRh"/>
+                            <constraint firstItem="QyP-Hk-Ug7" firstAttribute="bottom" secondItem="iVw-7Y-UL2" secondAttribute="bottom" id="03G-tP-D3L"/>
+                            <constraint firstItem="vxX-K7-7pz" firstAttribute="width" secondItem="VnW-Z8-nY9" secondAttribute="width" constant="-16" id="06G-eU-dmF"/>
+                            <constraint firstItem="gpl-gz-nuM" firstAttribute="centerX" secondItem="VnW-Z8-nY9" secondAttribute="centerX" id="1E2-yL-HWH"/>
+                            <constraint firstItem="iVw-7Y-UL2" firstAttribute="top" secondItem="K72-Pm-FNQ" secondAttribute="bottom" id="3X0-H9-BHa"/>
+                            <constraint firstItem="vxX-K7-7pz" firstAttribute="height" secondItem="VnW-Z8-nY9" secondAttribute="height" constant="16" id="4NL-jV-4vI"/>
+                            <constraint firstItem="K72-Pm-FNQ" firstAttribute="trailing" secondItem="ToO-uo-2gJ" secondAttribute="trailing" constant="8" id="6Wg-Xc-oDY"/>
+                            <constraint firstItem="VnW-Z8-nY9" firstAttribute="leading" secondItem="QyP-Hk-Ug7" secondAttribute="leading" constant="8" id="7Gx-TV-ZtB"/>
+                            <constraint firstItem="K72-Pm-FNQ" firstAttribute="top" secondItem="Gut-e4-rJ5" secondAttribute="bottom" id="CNu-Hh-myL"/>
+                            <constraint firstItem="QyP-Hk-Ug7" firstAttribute="trailing" secondItem="iVw-7Y-UL2" secondAttribute="trailing" id="CY5-Ql-MsM"/>
+                            <constraint firstItem="gpl-gz-nuM" firstAttribute="height" secondItem="VnW-Z8-nY9" secondAttribute="height" constant="32" id="FoC-rc-Xgx"/>
+                            <constraint firstItem="iVw-7Y-UL2" firstAttribute="leading" secondItem="QyP-Hk-Ug7" secondAttribute="leading" id="GED-VS-91I"/>
+                            <constraint firstItem="QyP-Hk-Ug7" firstAttribute="trailing" secondItem="Gut-e4-rJ5" secondAttribute="trailing" id="L9a-rz-OxO"/>
+                            <constraint firstItem="QyP-Hk-Ug7" firstAttribute="trailing" secondItem="VnW-Z8-nY9" secondAttribute="trailing" constant="8" id="P77-oy-n75"/>
+                            <constraint firstItem="VnW-Z8-nY9" firstAttribute="top" secondItem="QyP-Hk-Ug7" secondAttribute="top" constant="24" id="QHW-ZW-OuB"/>
+                            <constraint firstItem="QyP-Hk-Ug7" firstAttribute="leading" secondItem="Gut-e4-rJ5" secondAttribute="leading" id="R4f-e6-hbE"/>
+                            <constraint firstItem="aqE-Da-Bal" firstAttribute="leading" secondItem="K72-Pm-FNQ" secondAttribute="leading" constant="8" id="REz-2z-y3V"/>
+                            <constraint firstItem="iVw-7Y-UL2" firstAttribute="height" secondItem="zb0-9D-uus" secondAttribute="height" multiplier="1/5" id="RzE-sF-UdB"/>
+                            <constraint firstItem="gpl-gz-nuM" firstAttribute="centerY" secondItem="VnW-Z8-nY9" secondAttribute="centerY" id="XW2-7o-67k"/>
+                            <constraint firstItem="gpl-gz-nuM" firstAttribute="width" secondItem="VnW-Z8-nY9" secondAttribute="width" constant="-32" id="cgh-KF-WiG"/>
+                            <constraint firstItem="K72-Pm-FNQ" firstAttribute="leading" secondItem="QyP-Hk-Ug7" secondAttribute="leading" constant="-1" id="fV5-Cj-Apf"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="aqE-Da-Bal" secondAttribute="trailing" constant="20" symbolic="YES" id="gfO-L6-zdk"/>
+                            <constraint firstItem="Gut-e4-rJ5" firstAttribute="top" secondItem="VnW-Z8-nY9" secondAttribute="bottom" constant="16" id="iHX-mq-DPb"/>
+                            <constraint firstItem="vxX-K7-7pz" firstAttribute="centerX" secondItem="VnW-Z8-nY9" secondAttribute="centerX" id="mKF-2r-pQu"/>
+                            <constraint firstItem="K72-Pm-FNQ" firstAttribute="height" secondItem="zb0-9D-uus" secondAttribute="height" multiplier="1/11" id="n5L-a4-eGo"/>
+                            <constraint firstItem="QyP-Hk-Ug7" firstAttribute="trailing" secondItem="K72-Pm-FNQ" secondAttribute="trailing" constant="-1" id="oQS-gc-fP2"/>
+                            <constraint firstItem="ToO-uo-2gJ" firstAttribute="centerY" secondItem="K72-Pm-FNQ" secondAttribute="centerY" id="rCG-8r-jMI"/>
+                            <constraint firstItem="ToO-uo-2gJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zb0-9D-uus" secondAttribute="leading" constant="20" symbolic="YES" id="rii-J8-Ure"/>
+                            <constraint firstItem="VnW-Z8-nY9" firstAttribute="height" secondItem="zb0-9D-uus" secondAttribute="height" multiplier="1/4" id="uM2-ap-Dxm"/>
+                            <constraint firstItem="aqE-Da-Bal" firstAttribute="centerY" secondItem="K72-Pm-FNQ" secondAttribute="centerY" id="uNi-zI-ewg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QyP-Hk-Ug7"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" enabled="NO" title="Play" image="playIcon" id="MLc-71-wAb">
+                        <color key="badgeColor" red="1" green="0.2784313725" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="airplayImageView" destination="tsW-uD-rEh" id="bfi-fe-LZm"/>
+                        <outlet property="buttonsView" destination="iVw-7Y-UL2" id="OLT-6j-dwP"/>
+                        <outlet property="likeImageView" destination="qv3-Vv-bBF" id="ITu-cj-3xf"/>
+                        <outlet property="playButton" destination="yt1-IE-JZU" id="K0V-oK-kLm"/>
+                        <outlet property="trackDurationLabel" destination="ToO-uo-2gJ" id="Kkn-Iq-i6h"/>
+                        <outlet property="trackInfoView" destination="VnW-Z8-nY9" id="5kM-vp-ysj"/>
+                        <outlet property="trackPositionView" destination="ty5-Fy-yfi" id="xlt-P7-6ny"/>
+                        <outlet property="trackPositionViewLeadingConstraint" destination="hes-JJ-sBy" id="hgC-VL-8dL"/>
+                        <outlet property="trackTimePositionLabel" destination="aqE-Da-Bal" id="Qsx-SC-HWy"/>
+                        <outlet property="waveformView" destination="K72-Pm-FNQ" id="qxr-kz-ayk"/>
+                        <outlet property="wavesView" destination="Gut-e4-rJ5" id="NAk-2z-l8j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hHB-8j-pOM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer numberOfTapsRequired="3" numberOfTouchesRequired="3" id="kQM-AK-1h5">
+                    <connections>
+                        <action selector="next:" destination="HEe-GJ-al9" id="6vP-qD-3s6"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-1087.2" y="132.68365817091455"/>
+        </scene>
+        <!--Likes-->
+        <scene sceneID="vkm-lV-6GT">
+            <objects>
+                <viewController id="EYn-Xx-He5" customClass="BSLikesViewController" customModule="BSRadioWaves" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="enR-h5-STQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UAU-2z-CT7" customClass="BSRoundView" customModule="BSRadioWaves" customModuleProvider="target">
+                                <rect key="frame" x="8" y="28" width="359" height="582"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fsp-MV-c8T" customClass="BSLikesView" customModule="BSRadioWaves" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="582"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="uIi-Y7-1i0">
+                                            <size key="itemSize" width="60" height="60"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells/>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="fsp-MV-c8T" firstAttribute="leading" secondItem="UAU-2z-CT7" secondAttribute="leading" id="M7k-N0-y8h"/>
+                                    <constraint firstAttribute="bottom" secondItem="fsp-MV-c8T" secondAttribute="bottom" id="kU4-xf-WPl"/>
+                                    <constraint firstItem="fsp-MV-c8T" firstAttribute="top" secondItem="UAU-2z-CT7" secondAttribute="top" id="keU-jV-ses"/>
+                                    <constraint firstAttribute="trailing" secondItem="fsp-MV-c8T" secondAttribute="trailing" id="uvX-Pb-kNN"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UAU-2z-CT7" firstAttribute="leading" secondItem="w5i-Fk-mVK" secondAttribute="leading" constant="8" id="g4h-5R-9kL"/>
+                            <constraint firstItem="UAU-2z-CT7" firstAttribute="top" secondItem="w5i-Fk-mVK" secondAttribute="top" constant="8" id="iqT-da-bvI"/>
+                            <constraint firstItem="w5i-Fk-mVK" firstAttribute="trailing" secondItem="UAU-2z-CT7" secondAttribute="trailing" constant="8" id="jrp-CG-drS"/>
+                            <constraint firstItem="w5i-Fk-mVK" firstAttribute="bottom" secondItem="UAU-2z-CT7" secondAttribute="bottom" constant="8" id="tO0-CK-h2F"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="w5i-Fk-mVK"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Likes" image="whiteHeartIcon" id="bAU-f5-XzO">
+                        <color key="badgeColor" red="1" green="0.2784313725" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="collectionView" destination="fsp-MV-c8T" id="tlX-aU-Nbd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WXO-uM-qsZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1087" y="913"/>
+        </scene>
+        <!--Icon View Controller-->
+        <scene sceneID="qV8-ck-0AV">
+            <objects>
+                <viewController id="DBF-jp-xHl" customClass="BSIconViewController" customModule="BSRadioWaves" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nt1-20-uVo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oih-1a-FCU" customClass="BSRoundView" customModule="BSRadioWaves" customModuleProvider="target">
+                                <rect key="frame" x="59.5" y="215.5" width="256" height="256"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="256" id="B3W-gh-wiD"/>
+                                    <constraint firstAttribute="width" constant="256" id="Z9E-dq-oop"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qGN-2h-20c" customClass="BSPlayPauseIconView" customModule="BSRadioWaves" customModuleProvider="target">
+                                <rect key="frame" x="59.5" y="215.5" width="256" height="256"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pdu-gN-WIf" customClass="BSWavesView" customModule="BSRadioWaves" customModuleProvider="target">
+                                <rect key="frame" x="59.5" y="215.5" width="256" height="256"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qGN-2h-20c" firstAttribute="centerX" secondItem="Oih-1a-FCU" secondAttribute="centerX" id="3xl-Jb-nFI"/>
+                            <constraint firstItem="Oih-1a-FCU" firstAttribute="centerX" secondItem="khJ-Po-L1H" secondAttribute="centerX" id="EEG-jz-wZr"/>
+                            <constraint firstItem="pdu-gN-WIf" firstAttribute="centerY" secondItem="Oih-1a-FCU" secondAttribute="centerY" id="HY0-1a-EpE"/>
+                            <constraint firstItem="pdu-gN-WIf" firstAttribute="centerX" secondItem="Oih-1a-FCU" secondAttribute="centerX" id="O0q-4U-0cz"/>
+                            <constraint firstItem="qGN-2h-20c" firstAttribute="centerY" secondItem="Oih-1a-FCU" secondAttribute="centerY" id="Q0m-BS-uLQ"/>
+                            <constraint firstItem="qGN-2h-20c" firstAttribute="height" secondItem="Oih-1a-FCU" secondAttribute="height" id="coO-Vk-vet"/>
+                            <constraint firstItem="qGN-2h-20c" firstAttribute="width" secondItem="Oih-1a-FCU" secondAttribute="width" id="dHd-vm-N0o"/>
+                            <constraint firstItem="pdu-gN-WIf" firstAttribute="height" secondItem="Oih-1a-FCU" secondAttribute="height" id="jhV-EP-fGd"/>
+                            <constraint firstItem="Oih-1a-FCU" firstAttribute="centerY" secondItem="khJ-Po-L1H" secondAttribute="centerY" id="nto-2m-iBC"/>
+                            <constraint firstItem="pdu-gN-WIf" firstAttribute="width" secondItem="Oih-1a-FCU" secondAttribute="width" id="yfW-bR-Pu5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="khJ-Po-L1H"/>
+                    </view>
+                    <connections>
+                        <outlet property="iconView" destination="qGN-2h-20c" id="enh-sP-H1G"/>
+                        <outlet property="wavesView" destination="pdu-gN-WIf" id="7xO-O9-Qto"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iMl-JI-ayS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-297" y="913"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="airplayIcon" width="25" height="25"/>
+        <image name="listIcon" width="25" height="25"/>
+        <image name="playIcon" width="25" height="25"/>
+        <image name="whiteHeartIcon" width="25" height="25"/>
+    </resources>
+</document>

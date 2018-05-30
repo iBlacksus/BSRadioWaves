@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="cR6-0a-z5a" customClass="BSCategoryCell" customModule="BSRadioWaves" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="399" height="426"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="399" height="426"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L6h-mv-JgD" customClass="BSRoundView" customModule="BSRadioWaves" customModuleProvider="target">
+                        <rect key="frame" x="8" y="16" width="383" height="402"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="yK1-Yw-Gwk" customClass="BSChannelsView" customModule="BSRadioWaves" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="383" height="402"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="8" minimumInteritemSpacing="8" id="Nxg-I6-t6b">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="8" minY="58" maxX="8" maxY="8"/>
+                                </collectionViewFlowLayout>
+                            </collectionView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X6E-ED-h9k">
+                                <rect key="frame" x="0.0" y="0.0" width="383" height="50"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="BGv-vB-v0S">
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="50"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xnQ-6e-W1E">
+                                            <rect key="frame" x="0.0" y="0.0" width="40" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="40" id="Pm5-bQ-vCX"/>
+                                            </constraints>
+                                            <state key="normal" image="arrowsLeftIcon">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="left:" destination="cR6-0a-z5a" eventType="touchUpInside" id="EB3-Vb-9da"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sp8-Bh-AhR">
+                                            <rect key="frame" x="40" y="0.0" width="303" height="50"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="19"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PbU-oN-GM5">
+                                            <rect key="frame" x="343" y="0.0" width="40" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="40" id="93U-9S-Kmz"/>
+                                            </constraints>
+                                            <state key="normal" image="arrowsRightIcon">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="right:" destination="cR6-0a-z5a" eventType="touchUpInside" id="naG-EK-sK4"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="PbU-oN-GM5" firstAttribute="leading" secondItem="sp8-Bh-AhR" secondAttribute="trailing" id="GOS-AK-bIc"/>
+                                        <constraint firstItem="xnQ-6e-W1E" firstAttribute="leading" secondItem="BGv-vB-v0S" secondAttribute="leading" id="IFF-JC-CaF"/>
+                                        <constraint firstItem="sp8-Bh-AhR" firstAttribute="top" secondItem="BGv-vB-v0S" secondAttribute="top" id="KPd-NX-MNH"/>
+                                        <constraint firstAttribute="bottom" secondItem="xnQ-6e-W1E" secondAttribute="bottom" id="WQm-mr-huV"/>
+                                        <constraint firstAttribute="bottom" secondItem="PbU-oN-GM5" secondAttribute="bottom" id="Ydg-bN-ymJ"/>
+                                        <constraint firstAttribute="trailing" secondItem="PbU-oN-GM5" secondAttribute="trailing" id="aE7-AU-SuH"/>
+                                        <constraint firstItem="xnQ-6e-W1E" firstAttribute="top" secondItem="BGv-vB-v0S" secondAttribute="top" id="bpA-4N-8AJ"/>
+                                        <constraint firstItem="sp8-Bh-AhR" firstAttribute="leading" secondItem="xnQ-6e-W1E" secondAttribute="trailing" id="gK8-wZ-chd"/>
+                                        <constraint firstItem="PbU-oN-GM5" firstAttribute="top" secondItem="BGv-vB-v0S" secondAttribute="top" id="oc6-9x-bID"/>
+                                        <constraint firstAttribute="bottom" secondItem="sp8-Bh-AhR" secondAttribute="bottom" id="sLw-Bb-d91"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="8J9-vv-O30"/>
+                                </constraints>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.53465056419372559" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="X6E-ED-h9k" secondAttribute="trailing" id="3qn-NH-7ga"/>
+                            <constraint firstItem="yK1-Yw-Gwk" firstAttribute="leading" secondItem="L6h-mv-JgD" secondAttribute="leading" id="4Ud-aN-vxh"/>
+                            <constraint firstItem="yK1-Yw-Gwk" firstAttribute="top" secondItem="L6h-mv-JgD" secondAttribute="top" id="CS4-4v-L71"/>
+                            <constraint firstItem="X6E-ED-h9k" firstAttribute="leading" secondItem="L6h-mv-JgD" secondAttribute="leading" id="KBU-z3-fok"/>
+                            <constraint firstAttribute="bottom" secondItem="yK1-Yw-Gwk" secondAttribute="bottom" id="Mt8-0S-bj9"/>
+                            <constraint firstItem="X6E-ED-h9k" firstAttribute="top" secondItem="L6h-mv-JgD" secondAttribute="top" id="fov-1H-jEm"/>
+                            <constraint firstAttribute="trailing" secondItem="yK1-Yw-Gwk" secondAttribute="trailing" id="mLz-rl-zeC"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="L6h-mv-JgD" secondAttribute="bottom" constant="8" id="2TC-Uh-RWb"/>
+                <constraint firstAttribute="trailing" secondItem="L6h-mv-JgD" secondAttribute="trailing" constant="8" id="JhN-Sa-GEL"/>
+                <constraint firstItem="L6h-mv-JgD" firstAttribute="leading" secondItem="cR6-0a-z5a" secondAttribute="leading" constant="8" id="LRN-hv-PUt"/>
+                <constraint firstItem="L6h-mv-JgD" firstAttribute="top" secondItem="cR6-0a-z5a" secondAttribute="top" constant="16" id="uzL-jO-w9k"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ir2-nX-iad"/>
+            <size key="customSize" width="399" height="426"/>
+            <connections>
+                <outlet property="collectionView" destination="yK1-Yw-Gwk" id="fsN-OS-jm0"/>
+                <outlet property="leftButton" destination="xnQ-6e-W1E" id="Ib9-Su-Hxo"/>
+                <outlet property="rightButton" destination="PbU-oN-GM5" id="uWX-Ti-0PO"/>
+                <outlet property="titleLabel" destination="sp8-Bh-AhR" id="sTS-Ob-2gZ"/>
+            </connections>
+            <point key="canvasLocation" x="152.5" y="50"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="arrowsLeftIcon" width="25" height="25"/>
+        <image name="arrowsRightIcon" width="25" height="25"/>
+    </resources>
+</document>

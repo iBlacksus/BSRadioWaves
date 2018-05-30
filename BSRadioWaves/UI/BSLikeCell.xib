@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Light.ttf">
+            <string>Roboto-Light</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="zgw-lq-0GV" customClass="BSLikeCell" customModule="BSRadioWaves" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="469" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="469" height="60"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bhd-YU-Q8o">
+                        <rect key="frame" x="8" y="8" width="341" height="44"/>
+                        <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUj-7h-lmY">
+                        <rect key="frame" x="349" y="0.0" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="KKN-Qe-Vu6"/>
+                        </constraints>
+                        <connections>
+                            <action selector="unlike:" destination="zgw-lq-0GV" eventType="touchUpInside" id="tV6-Dc-EyU"/>
+                        </connections>
+                    </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="brokenHeartIcon" translatesAutoresizingMaskIntoConstraints="NO" id="fuO-ym-4Fy">
+                        <rect key="frame" x="359" y="11.5" width="40" height="40"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYn-kk-STL">
+                        <rect key="frame" x="409" y="0.0" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="UCP-l7-uHU"/>
+                        </constraints>
+                        <connections>
+                            <action selector="share:" destination="zgw-lq-0GV" eventType="touchUpInside" id="4hX-Bc-wA9"/>
+                        </connections>
+                    </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="shareIcon" translatesAutoresizingMaskIntoConstraints="NO" id="23Y-X8-hoS">
+                        <rect key="frame" x="419" y="10" width="40" height="40"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="1" green="0.62352941179999999" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="fuO-ym-4Fy" firstAttribute="height" secondItem="KUj-7h-lmY" secondAttribute="height" constant="-20" id="1AR-0Y-kJl"/>
+                <constraint firstItem="Bhd-YU-Q8o" firstAttribute="top" secondItem="Nfp-PO-J4V" secondAttribute="top" constant="8" id="1pn-DO-kMl"/>
+                <constraint firstItem="KUj-7h-lmY" firstAttribute="top" secondItem="zgw-lq-0GV" secondAttribute="top" id="3qJ-D9-zs6"/>
+                <constraint firstItem="KUj-7h-lmY" firstAttribute="leading" secondItem="Bhd-YU-Q8o" secondAttribute="trailing" id="ChA-Ju-sBm"/>
+                <constraint firstItem="fuO-ym-4Fy" firstAttribute="width" secondItem="KUj-7h-lmY" secondAttribute="width" constant="-20" id="DcF-ra-lcj"/>
+                <constraint firstItem="fYn-kk-STL" firstAttribute="leading" secondItem="KUj-7h-lmY" secondAttribute="trailing" id="FGX-Uf-J4y"/>
+                <constraint firstItem="fuO-ym-4Fy" firstAttribute="centerY" secondItem="KUj-7h-lmY" secondAttribute="centerY" constant="2" id="I0Z-o7-Sji"/>
+                <constraint firstItem="Bhd-YU-Q8o" firstAttribute="leading" secondItem="Nfp-PO-J4V" secondAttribute="leading" constant="8" id="Iu9-bA-rY4"/>
+                <constraint firstAttribute="bottom" secondItem="fYn-kk-STL" secondAttribute="bottom" id="P4o-TY-Qen"/>
+                <constraint firstAttribute="bottom" secondItem="KUj-7h-lmY" secondAttribute="bottom" id="WcP-jT-4iM"/>
+                <constraint firstItem="23Y-X8-hoS" firstAttribute="width" secondItem="fYn-kk-STL" secondAttribute="width" constant="-20" id="WtG-dp-JH6"/>
+                <constraint firstItem="Nfp-PO-J4V" firstAttribute="bottom" secondItem="Bhd-YU-Q8o" secondAttribute="bottom" constant="8" id="X23-wh-MlF"/>
+                <constraint firstItem="fuO-ym-4Fy" firstAttribute="centerX" secondItem="KUj-7h-lmY" secondAttribute="centerX" id="Yk6-1E-yKa"/>
+                <constraint firstAttribute="trailing" secondItem="fYn-kk-STL" secondAttribute="trailing" id="beg-fx-pHE"/>
+                <constraint firstItem="23Y-X8-hoS" firstAttribute="centerX" secondItem="fYn-kk-STL" secondAttribute="centerX" id="fbs-Lb-Oml"/>
+                <constraint firstItem="fYn-kk-STL" firstAttribute="top" secondItem="zgw-lq-0GV" secondAttribute="top" id="gAs-ts-yoC"/>
+                <constraint firstItem="23Y-X8-hoS" firstAttribute="centerY" secondItem="fYn-kk-STL" secondAttribute="centerY" id="hKu-6L-FzX"/>
+                <constraint firstItem="23Y-X8-hoS" firstAttribute="height" secondItem="fYn-kk-STL" secondAttribute="height" constant="-20" id="ur0-Fc-RxZ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Nfp-PO-J4V"/>
+            <size key="customSize" width="469" height="64"/>
+            <connections>
+                <outlet property="shareImageView" destination="23Y-X8-hoS" id="Wuw-uD-vOL"/>
+                <outlet property="titleLabel" destination="Bhd-YU-Q8o" id="Oti-d3-AiA"/>
+                <outlet property="unlikeImageView" destination="fuO-ym-4Fy" id="aBE-1t-Rbk"/>
+            </connections>
+            <point key="canvasLocation" x="249.5" y="61"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="brokenHeartIcon" width="25" height="25"/>
+        <image name="shareIcon" width="25" height="25"/>
+    </resources>
+</document>
