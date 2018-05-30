@@ -3,8 +3,6 @@
 ![Image](DemoResources/iphone.png)
 ![Image](DemoResources/watch.png)
 
-# BSRadioWaves is available for personal usage ONLY! Commercial usage is prohibited!
-
 ## Usage
 
 ######To run the project, clone the repo, and run `pod install` from the project directory first.
