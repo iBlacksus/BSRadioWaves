@@ -50,7 +50,6 @@
 		062E7F0F1FB1A73500217A3B /* BSPlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062E7F0E1FB1A73500217A3B /* BSPlayButton.swift */; };
 		062E7F111FB1A96900217A3B /* BSPlayPauseIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062E7F101FB1A96900217A3B /* BSPlayPauseIconView.swift */; };
 		062E7F131FB1BF4A00217A3B /* BSTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062E7F121FB1BF4A00217A3B /* BSTabBarController.swift */; };
-		063A3B091FBB0DBD00E64373 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 063A3B081FBB0DBD00E64373 /* Assets.xcassets */; };
 		063A3B0A1FBB0DCF00E64373 /* Assets.xcassets in Sources */ = {isa = PBXBuildFile; fileRef = 063A3B081FBB0DBD00E64373 /* Assets.xcassets */; };
 		0640D24D1FC2E8D300E9ECB2 /* BSCategoriesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B22B2E1FC2CA070085FF30 /* BSCategoriesController.swift */; };
 		06593EEC1FAA51BA00689EA7 /* BSCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06593EE41FAA51BA00689EA7 /* BSCategoriesViewController.swift */; };
@@ -97,7 +96,6 @@
 		06B22B171FC1A24B0085FF30 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B22B161FC1A24B0085FF30 /* ExtensionDelegate.swift */; };
 		06B22B191FC1A24B0085FF30 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B22B181FC1A24B0085FF30 /* NotificationController.swift */; };
 		06B22B1B1FC1A24B0085FF30 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B22B1A1FC1A24B0085FF30 /* ComplicationController.swift */; };
-		06B22B1D1FC1A24B0085FF30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06B22B1C1FC1A24B0085FF30 /* Assets.xcassets */; };
 		06B22B221FC1A24B0085FF30 /* Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 06B22B031FC1A24A0085FF30 /* Watch.app */; };
 		06CC90A41FC56A8B0033EF22 /* BSWavesDrawerProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CC90A31FC56A8B0033EF22 /* BSWavesDrawerProxy.swift */; };
 		06CC90A71FC56E9F0033EF22 /* BSWavesDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CC90A61FC56E9E0033EF22 /* BSWavesDrawer.swift */; };
@@ -672,7 +670,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0910;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = iBlacksus;
 				TargetAttributes = {
 					06593EC51FA91A5D00689EA7 = {
@@ -721,7 +719,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				063A3B091FBB0DBD00E64373 /* Assets.xcassets in Resources */,
 				06EF3E371FBC27BD00CB18E4 /* BSLikeCell.xib in Resources */,
 				061C0AD31FBAD1CF003E6066 /* Roboto-ThinItalic.ttf in Resources */,
 				061C0AD41FBAD1CF003E6066 /* Roboto-BoldItalic.ttf in Resources */,
@@ -768,7 +765,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				061F72F71FC6A5E2003919D5 /* Assets.xcassets in Resources */,
-				06B22B1D1FC1A24B0085FF30 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -817,7 +813,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-BSRadioWaves/Pods-BSRadioWaves-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-BSRadioWaves/Pods-BSRadioWaves-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire-iOS/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper-iOS/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/CryptoSwift-iOS/CryptoSwift.framework",
@@ -836,7 +832,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BSRadioWaves/Pods-BSRadioWaves-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BSRadioWaves/Pods-BSRadioWaves-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B018866A18BC29AF68E7962F /* [CP] Embed Pods Frameworks */ = {
@@ -845,7 +841,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Watch Extension/Pods-Watch Extension-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Watch Extension/Pods-Watch Extension-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire-watchOS/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper-watchOS/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/CryptoSwift-watchOS/CryptoSwift.framework",
@@ -862,7 +858,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Watch Extension/Pods-Watch Extension-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Watch Extension/Pods-Watch Extension-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1010,6 +1006,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -1017,6 +1014,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -1067,6 +1065,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -1074,6 +1073,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -1114,6 +1114,7 @@
 				INFOPLIST_FILE = BSRadioWaves/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = iBlacksus.BSRadioWaves;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "5f9082d6-2a97-4799-96ee-dceaf03439a6";
@@ -1135,6 +1136,7 @@
 				INFOPLIST_FILE = BSRadioWaves/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = iBlacksus.BSRadioWaves;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1152,6 +1154,7 @@
 				DEVELOPMENT_TEAM = LS7LKYHTNJ;
 				INFOPLIST_FILE = "Watch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = iBlacksus.BSRadioWaves.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE = "f6d5cd5e-aa4c-4380-a6c2-14f9fad81fd8";
@@ -1173,6 +1176,7 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Watch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = iBlacksus.BSRadioWaves.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1195,6 +1199,7 @@
 				IBSC_MODULE = Watch_Extension;
 				INFOPLIST_FILE = Watch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = iBlacksus.BSRadioWaves.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "f6d5cd5e-aa4c-4380-a6c2-14f9fad81fd8";
@@ -1219,6 +1224,7 @@
 				IBSC_MODULE = Watch_Extension;
 				INFOPLIST_FILE = Watch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = iBlacksus.BSRadioWaves.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

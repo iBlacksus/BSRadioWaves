@@ -1,0 +1,6 @@
+framework module Pods_BSRadioWaves {
+  umbrella header "Pods-BSRadioWaves-umbrella.h"
+
+  export *
+  module * { export * }
+}

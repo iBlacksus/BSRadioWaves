@@ -1,0 +1,6 @@
+framework module ObjectMapper {
+  umbrella header "ObjectMapper-watchOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

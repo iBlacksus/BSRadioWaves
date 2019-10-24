@@ -1,0 +1,39 @@
+PODS:
+  - Alamofire (4.9.0)
+  - AlamofireObjectMapper (5.2.1):
+    - Alamofire (~> 4.7)
+    - ObjectMapper (~> 3.4)
+  - CryptoSwift (1.1.3)
+  - ObjectMapper (3.5.1)
+  - SDWebImage (4.4.7):
+    - SDWebImage/Core (= 4.4.7)
+  - SDWebImage/Core (4.4.7)
+  - Toast-Swift (5.0.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.5)
+  - AlamofireObjectMapper (~> 5.0)
+  - CryptoSwift
+  - SDWebImage (~> 4.0)
+  - Toast-Swift
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - AlamofireObjectMapper
+    - CryptoSwift
+    - ObjectMapper
+    - SDWebImage
+    - Toast-Swift
+
+SPEC CHECKSUMS:
+  Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
+  AlamofireObjectMapper: 1989f690e982b71921b9253f53a4f33a9bc00d88
+  CryptoSwift: 6b6e488df0598b3e9fa49254ed1a65e8c1b1e10b
+  ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
+  SDWebImage: c10d14a8883ebd89664f02a422006f66a85c0c5d
+  Toast-Swift: 36f4720243c8582c2be243a60a51e193c761f541
+
+PODFILE CHECKSUM: 0b562daaa596368d56055dd155a6bfc28bc54ce1
+
+COCOAPODS: 1.8.4
