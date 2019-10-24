@@ -1,0 +1,12 @@
+ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Alamofire-watchOS" "${PODS_CONFIGURATION_BUILD_DIR}/AlamofireObjectMapper-watchOS" "${PODS_CONFIGURATION_BUILD_DIR}/CryptoSwift-watchOS" "${PODS_CONFIGURATION_BUILD_DIR}/ObjectMapper-watchOS" "${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage-watchOS"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Alamofire-watchOS/Alamofire.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/AlamofireObjectMapper-watchOS/AlamofireObjectMapper.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/CryptoSwift-watchOS/CryptoSwift.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/ObjectMapper-watchOS/ObjectMapper.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage-watchOS/SDWebImage.framework/Headers"
+LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
+OTHER_LDFLAGS = $(inherited) -framework "Alamofire" -framework "AlamofireObjectMapper" -framework "CryptoSwift" -framework "ImageIO" -framework "ObjectMapper" -framework "SDWebImage"
+OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS
+PODS_BUILD_DIR = ${BUILD_DIR}
+PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
+PODS_ROOT = ${SRCROOT}/Pods
+USE_RECURSIVE_SCRIPT_INPUTS_IN_SCRIPT_PHASES = YES

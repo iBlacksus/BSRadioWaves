@@ -40,9 +40,11 @@ class BSLikesView: UICollectionView, UICollectionViewDelegate, UICollectionViewD
         let cellRect: CGRect = (attributes?.frame)!
         let view: UIView = collectionView.superview!
         let cellFrameInSuperview = collectionView.convert(cellRect, to: view)
-        let position = CGPoint(x: cellFrameInSuperview.midX, y: cellFrameInSuperview.midY)
+//        let position = CGPoint(x: cellFrameInSuperview.midX, y: cellFrameInSuperview.midY)
         
-        self.makeToast("Copied to clipboard", duration: 1.25, position: position)
+        self.makeToast("Copied to clipboard", duration: 1.25, position: .bottom, title: "", image: nil) { (success) in
+            
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

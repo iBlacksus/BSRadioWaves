@@ -22,7 +22,7 @@ class BSAppDelegate: UIResponder, UIApplicationDelegate {
         var style = ToastStyle()
         style.backgroundColor = UIColor.black.withAlphaComponent(0.4)
         ToastManager.shared.style = style
-        ToastManager.shared.tapToDismissEnabled = true
+        ToastManager.shared.isTapToDismissEnabled = true
         
         SDImageCache.shared().config.maxCacheAge = 60 * 60 * 24
         
